@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+    <title>Download | InShare - File Sharing Made Easy</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+ </head>
+
+<body>
+        <img src="" alt="InShare logo" class="logo">
+        
+        <section class="download">
+            <img src="" alt="" class="download_icon" alt="inshare-download">
+            <% if(locals.error){ %>
+                <h4><%= locals.error %></h4>
+             <% }
+             else { %>
+                <h2>Your file is ready to download</h2>
+                <p>Link Expired in 24 hours</p>
+                <div class="download-meta">
+                    <h4><%= fileName %></h4>
+                    <small><%= parseInt(fileSize/1000) %> KB</small>    
+                </div>
+            <div class="send-btn-container">
+                <a href="<%= downloadLink %>">Download file</a>
+            </div>
+            <% } %> 
+        </section>
+
+        <!-- githu fork button -->
+        <a href="........githublink............. " target="_blank" class="github-corner"
+        aria-label="View source on Github">
+        
+            <svg width="80" height="80" viewbox ="0 0 250 250" 
+            style="fill:#131315c9; color:#fff; position: absolute ; top:0 ; border: 0; right:0" aria-hidden="true">
+            <path d= "M0,0 L115,115,L130,115,L142, 142 L250 250 L250,0 Z"></path>
+
+            <path
+            d="M128.3"
+             fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm">
+            </path>
+            <path
+            d ="M115.0"
+            fill="currenColor" class="octo-body">
+            </path>
+        </svg>
+  </a>
+
+</body>
+</html>
